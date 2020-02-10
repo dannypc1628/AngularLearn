@@ -6,10 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+  title = 'The Will Will Web~~~~';
+  url = 'http://blog.miniasp.com/';
+  logourl = '/assets/images/logo.png';
+  constructor() {
 
-  constructor() { }
+  }
 
   ngOnInit(): void {
+    setTimeout(() => {
+      this.title = this.title + '123';
+    }, 3000);
   }
 
 }
