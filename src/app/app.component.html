@@ -76,12 +76,12 @@
             <div class="widget-content">
                 <div id="searchbox">
                   <input type="text"
-                  (keyup)="keyin($event.target.value)"
-                  (keyup.escape)="keyesc($event.target)"
+                  [(ngModel)]="keyword"
+                  (keyup.escape)="keyesc()"
                   placeholder="請輸入搜尋關鍵字" accesskey="s">
                   <input type="button" value="搜尋" id="searchbutton">
                 </div>
-                <div>目前輸入的字數：{{textcount}}</div>
+                <div>輸入文字：{{keyword}} 目前輸入的字數：{{keyword.length}}</div>
             </div>
           </div>
           <!-- Search END -->
