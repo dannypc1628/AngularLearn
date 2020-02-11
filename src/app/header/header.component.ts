@@ -12,7 +12,20 @@ export class HeaderComponent implements OnInit {
   constructor() {
 
   }
-
+  changeTitle( $event: MouseEvent) {
+    this.title = 'AAABBCCC';
+    console.log($event);
+    console.log($event.target);
+    if ($event.altKey === true) {
+      console.log(' 有按alt ');
+    }
+  }
+  changeTitle2( altKey: boolean) {
+    console.log('changeTitle2觸發');
+    if (altKey) {
+      console.log(' 有按altKey ');
+    }
+  }
   ngOnInit(): void {
     setTimeout(() => {
       this.title = this.title + '123';
