@@ -1,7 +1,7 @@
 
-  <app-header></app-header>
+  <app-header #tHeader></app-header>
   <!-- CONTAINER START-->
-  <section class="container">
+  <section class="container" (click)="tHeader.title='點擊了container區塊'">
     <div class="row">
       <section class="col-md-8 content-wrapper">
         <div id="ctl00_cphBody_divError"></div>
@@ -75,13 +75,13 @@
           <div class="widget search">
             <div class="widget-content">
                 <div id="searchbox">
-                  <input type="text"
+                  <input type="text" #tInput
                   [(ngModel)]="keyword"
                   (keyup.escape)="keyesc()"
                   placeholder="請輸入搜尋關鍵字" accesskey="s">
                   <input type="button" value="搜尋" id="searchbutton">
                 </div>
-                <div>輸入文字：{{keyword}} 目前輸入的字數：{{keyword.length}}</div>
+                <div>輸入文字：{{keyword}} 目前輸入的字數：{{tInput.value.length}}</div>
             </div>
           </div>
           <!-- Search END -->
