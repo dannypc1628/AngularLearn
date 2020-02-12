@@ -1,13 +1,13 @@
 <div id="social-icons" class="pull-right social-icon">
-  <div [ngSwitch]="count%3">
-    <div *ngSwitchCase="1">
+  <ng-container [ngSwitch]="count%3">
+    <ng-container *ngSwitchCase="1">
       <a href="https://www.facebook.com/will.fans" title="Will 保哥的技術交流中心" target="_blank">
         <img src="/assets/images/facebook.png">
       </a>
       <a href="https://twitter.com/Will_Huang" title="@Will_Huang 保哥的推特" target="_blank">
         <img src="/assets/images/twitter.png">
       </a>
-    </div>
+    </ng-container>
     <div *ngSwitchCase="2">
       <a href="https://plus.google.com/+WillHuang" title="Will Huang (保哥) on Google+" target="_blank">
         <img src="/assets/images/googleplus.png">
@@ -36,6 +36,6 @@
         <img src="/assets/images/rss.png">
       </a>
     </div>
-  </div>
+  </ng-container>
 
 </div>
