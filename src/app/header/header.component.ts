@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -12,16 +12,21 @@ export class HeaderComponent implements OnInit {
   logourl = '/assets/images/logo.png';
   counter = 0;
   showIcon = true;
+
+  @Output()
+  logoclick = new EventEmitter<string>();
+
   constructor() {
 
   }
   changeTitle($event: MouseEvent) {
-    this.title = 'AAABBCCC';
+    this.title = 'AAABBCCC' + this.counter;
     console.log($event);
     console.log($event.target);
     if ($event.altKey === true) {
       console.log(' 有按alt ');
     }
+    this.logoclick.emit(this.title);
     this.counter++;
   }
   changeTitle2(altKey: boolean) {

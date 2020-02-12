@@ -1,5 +1,5 @@
 
-  <app-header #tHeader [title]="title"></app-header>
+  <app-header #tHeader [title]="title" (logoclick)="changeKey($event)"></app-header>
   <!-- CONTAINER START-->
   <section class="container" (click)="tHeader.title='點擊了container區塊'">
     <div class="row">

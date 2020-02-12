@@ -8,6 +8,9 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'demo1';
   keyword = '';
+  changeKey(str) {
+    this.keyword = str;
+  }
   data = [
     {
       "id": 1,
