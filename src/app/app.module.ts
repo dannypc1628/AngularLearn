@@ -9,12 +9,15 @@ import { SocialIconsComponent } from './social-icons/social-icons.component';
 
 import { FormsModule } from '@angular/forms';
 
+import { ArticleComponent } from './article/article.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    SocialIconsComponent
+    SocialIconsComponent,
+    ArticleComponent
     ],
   imports: [
     BrowserModule,
