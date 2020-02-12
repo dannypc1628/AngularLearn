@@ -26,7 +26,7 @@
   <div class="title-wrapper">
     <div class="container">
 
-      <img (click)="changeTitle($event)" [title]="title" [src]="logourl" [attr.data-title]="title" class="pull-left logo" alt="{{ title }}">
+      <img (click)="changeTitle($event);tIcon.count=counter" [title]="title" [src]="logourl" [attr.data-title]="title" class="pull-left logo" alt="{{ title }}">
       <button (click)="changeTitle2($event.altKey)"></button>
       <div class="pull-left">
       <h1><a [href]="url">{{title}}</a></h1>
@@ -37,7 +37,7 @@
         (mouseover)="showIcon=false" (mouseleave)="showIcon=true">記載著 Will 在網路世界的學習心得與技術分享{{counter}}</h3>
       </div>
 
-      <app-social-icons *ngIf="counter%2==0" ></app-social-icons>
+      <app-social-icons #tIcon></app-social-icons>
       <app-social-icons *ngIf="showIcon"></app-social-icons>
     </div>
   </div>

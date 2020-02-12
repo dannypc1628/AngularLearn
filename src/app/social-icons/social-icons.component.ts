@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./social-icons.component.css']
 })
 export class SocialIconsComponent implements OnInit {
-
+  count = 0;
   constructor() { }
 
   ngOnInit(): void {
