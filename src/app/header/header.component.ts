@@ -9,22 +9,27 @@ export class HeaderComponent implements OnInit {
   title = 'The Will Will Web~~~~';
   url = 'http://blog.miniasp.com/';
   logourl = '/assets/images/logo.png';
+  counter = 0;
   constructor() {
 
   }
-  changeTitle( $event: MouseEvent) {
+  changeTitle($event: MouseEvent) {
     this.title = 'AAABBCCC';
     console.log($event);
     console.log($event.target);
     if ($event.altKey === true) {
       console.log(' 有按alt ');
     }
+    this.counter++;
   }
-  changeTitle2( altKey: boolean) {
+  changeTitle2(altKey: boolean) {
     console.log('changeTitle2觸發');
     if (altKey) {
       console.log(' 有按altKey ');
     }
+  }
+  getStyle() {
+    return { 'font-size': (12 + this.counter) + 'px' };
   }
   ngOnInit(): void {
     setTimeout(() => {
