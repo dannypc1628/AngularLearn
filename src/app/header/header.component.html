@@ -33,11 +33,12 @@
         <h3 [ngStyle]="getStyle()"
         [ngClass]="{'highlight': counter%2==0}">記載著 Will 在網路世界的學習心得與技術分享{{counter}}</h3>
         <h3 [style.color]="'red'" [style.font-size]="(12+counter)+'px'"
-        [class.highlight]="counter%2==0">記載著 Will 在網路世界的學習心得與技術分享{{counter}}</h3>
+        [class.highlight]="counter%2==0"
+        (mouseover)="showIcon=false" (mouseleave)="showIcon=true">記載著 Will 在網路世界的學習心得與技術分享{{counter}}</h3>
       </div>
 
-      <app-social-icons></app-social-icons>
-
+      <app-social-icons *ngIf="counter%2==0" ></app-social-icons>
+      <app-social-icons *ngIf="showIcon"></app-social-icons>
     </div>
   </div>
 </header>

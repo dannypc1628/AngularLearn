@@ -10,6 +10,7 @@ export class HeaderComponent implements OnInit {
   url = 'http://blog.miniasp.com/';
   logourl = '/assets/images/logo.png';
   counter = 0;
+  showIcon = true;
   constructor() {
 
   }
