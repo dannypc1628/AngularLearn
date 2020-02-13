@@ -8,6 +8,8 @@ import { FooterComponent } from './footer/footer.component';
 import { SocialIconsComponent } from './social-icons/social-icons.component';
 
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
 
 import { ArticleComponent } from './article/article.component';
 
@@ -22,7 +24,8 @@ import { ArticleComponent } from './article/article.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
